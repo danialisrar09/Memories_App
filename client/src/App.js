@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { Container, AppBar, Typography, Grow, Grid } from "@mui/material";
-import { useDisptach } from "react-redux";
+import { useDispatch } from "react-redux";
 
-import { getPosts } from "./actions/Posts.js";
+import { getPosts } from "./actions/Posts";
 import Posts from "./components/Posts/Posts.js"
 import useStyles from "./styles.js";
 import memories from "./images/memories.png"
@@ -10,10 +10,10 @@ import Form from "./components/Form/Form.js";
 
 const App = () => {
     const classes = useStyles();
-    const disptach = useDisptach();
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        disptach(getPosts());
+        dispatch(getPosts());
     }, [dispatch])
     return (
         <Container Maxwidth="lg">
@@ -23,7 +23,7 @@ const App = () => {
             </AppBar>
             <Grow in>
                 <Container>
-                    <Grid container justify="space-between" alignItem="stretch" spacing={100}>
+                    <Grid container justify="space-between" alignItem="stretch" spacing={90}>
                         <Grid item xs={12} sm={7}>
                             <Posts />
                         </Grid>

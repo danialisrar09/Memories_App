@@ -3,7 +3,7 @@ import { makeStyles } from '@mui/styles';
 export default makeStyles((theme) => ({
   root: {
     '& .MuiTextField-root': {
-      margin: '8px',
+      margin: '15px',
     },
   },
   paper: {
@@ -11,14 +11,17 @@ export default makeStyles((theme) => ({
   },
   form: {
     display: 'flex',
-    flexWrap: 'wrap',
     justifyContent: 'center',
+    flexDirection: 'column',
+    
   },
   fileInput: {
     width: '97%',
     margin: '10px 0',
+    marginLeft: '15px'
   },
   buttonSubmit: {
-    marginBottom: 10,
+    marginBottom: '10px !important',
   },
+  
 }));
